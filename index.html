@@ -62,23 +62,73 @@
     <div id="experience">
         <h1>experience</h1>
         <div id="photos">
-            <div class="project-card">
-                <h3>Tire Performance Engineer — Michelin, Pune</h3>
-                <p><em>Aug 2023 – Present</em></p>
-                <p>
-                    Identified a ~3–4% energy consumption impact per 1 kg/t rolling resistance shift in electric LCVs through real-world CAN data analysis. Designed and executed a controlled real-world study evaluating fuel economy and TCO impact of a 3% RR reduction, benchmarking 8 parameters against BEE Star thresholds.
-                </p>
-                <p>
-                    Improved model-to-data agreement from 62.5% to 91.7% by refining parameters and filtering real-world anomalies; automated RR diagnostics by migrating Excel workflows to Python. Built 7 VECTO-based energy models and deployed the "TCO2" tool across 7 teams.
-                </p>
-            </div>
-            <div class="project-card">
-                <h3>Research &amp; Development Intern — Michelin, Pune</h3>
-                <p><em>Dec 2021 – May 2022</em></p>
-                <p>
-                    Devised an algorithm for wheel misalignment detection in multi-axle trucks using a physics-based model built on telematics and CAN data, detecting axle misalignment up to 0.06 degrees. Achieved 94% accuracy with 96% precision across varied operating and environmental conditions.
-                </p>
-            </div>
+
+            <details class="project-card accordion">
+                <summary>
+                    <div class="accordion-head">
+                        <h3>Quantifying the Energy Cost of Rolling Resistance</h3>
+                        <p class="accordion-meta">Tire Performance Engineer · Michelin, Pune · Aug 2023 – Present</p>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </summary>
+                <div class="accordion-body">
+                    <p>
+                        Electric LCVs are far more sensitive to rolling resistance than combustion vehicles, but nobody had quantified exactly how much. I pulled real-world CAN bus data from fleet vehicles and isolated the tire-driven component of energy consumption — finding that every 1 kg/t shift in rolling resistance moves energy consumption by roughly 3–4%.
+                    </p>
+                    <p>
+                        That number became the basis for a controlled field study comparing fuel economy and total cost of ownership across a 3% RR reduction, and for benchmarking 8 performance parameters against BEE Star regulatory thresholds — turning a lab-level insight into something the commercial team could act on.
+                    </p>
+                </div>
+            </details>
+
+            <details class="project-card accordion">
+                <summary>
+                    <div class="accordion-head">
+                        <h3>Making the Models Trustworthy Enough to Use</h3>
+                        <p class="accordion-meta">Tire Performance Engineer · Michelin, Pune · Aug 2023 – Present</p>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </summary>
+                <div class="accordion-body">
+                    <p>
+                        Simulation models are only useful if people trust them. I normalized fuel consumption data from 24 trucks against gross vehicle weight to isolate tire effects cleanly, then refined parameters and filtered out real-world anomalies — pushing model-to-data agreement from 62.5% up to 91.7%.
+                    </p>
+                    <p>
+                        I also moved the entire RR diagnostics pipeline from manual Excel post-processing to Python, so batch analysis across large test datasets that used to take days now runs automatically.
+                    </p>
+                </div>
+            </details>
+
+            <details class="project-card accordion">
+                <summary>
+                    <div class="accordion-head">
+                        <h3>Getting Seven Teams to Use the Same Numbers</h3>
+                        <p class="accordion-meta">Tire Performance Engineer · Michelin, Pune · Aug 2023 – Present</p>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </summary>
+                <div class="accordion-body">
+                    <p>
+                        A model is only as useful as the number of people who trust and use it. I built 7 VECTO-based energy models to quantify TCO impact across different vehicle designs and usage conditions, then deployed a tool internally called "TCO2" — and personally trained 7 teams to standardize how performance assessments were done across the org, instead of everyone using their own spreadsheet.
+                    </p>
+                </div>
+            </details>
+
+            <details class="project-card accordion">
+                <summary>
+                    <div class="accordion-head">
+                        <h3>Detecting Axle Misalignment Before It's a Problem</h3>
+                        <p class="accordion-meta">Research &amp; Development Intern · Michelin, Pune · Dec 2021 – May 2022</p>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon"></i>
+                </summary>
+                <div class="accordion-body">
+                    <p>
+                        Multi-axle commercial trucks lose fuel efficiency and tire life to axle misalignment that's often invisible until it's already causing damage. I built a physics-based model using telematics and CAN data to catch it early — detecting misalignment down to 0.06 degrees, with 94% accuracy and 96% precision across a range of real-world operating and environmental conditions.
+                    </p>
+                </div>
+            </details>
+
         </div>
     </div>
 
