@@ -243,57 +243,84 @@ header table {
     margin:20px auto 0px;
 }
 
-/* ---- Experience: accordion cards ---- */
-#experience .project-card {
-    width:340px;
+/* ---- Experience: visual clickable cards ---- */
+a.project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
-.accordion {
-    cursor: pointer;
+.visual-card {
+    width: 380px;
+    padding: 0;
 }
-.accordion:hover {
-    transform: none;
-    box-shadow:0 4px 12px rgba(0, 61, 106, 0.12);
-}
-.accordion summary {
-    list-style: none;
+.card-header {
+    background: #f4ede1;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px 20px;
-    outline: none;
+    align-items: center;
 }
-.accordion summary::-webkit-details-marker {
-    display: none;
+.card-title {
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: lowercase;
 }
-.accordion-head h3 {
-    color: #003D6A;
-    font-size: 17px;
-    margin: 0 0 6px;
-}
-.accordion-meta {
-    color: #777;
+.card-date {
+    color: #555;
     font-size: 13px;
-    font-style: italic;
-    margin: 0;
+    font-weight: 600;
+    white-space: nowrap;
 }
-.accordion-icon {
+.visual-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-bottom: none;
+}
+
+/* ---- Detail pages ---- */
+.detail-header {
+    width: 92vw;
+    padding: 4vh 4vw 2vh;
+}
+.back-link {
+    display: inline-block;
     color: #003D6A;
-    margin-left: 12px;
-    margin-top: 4px;
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-}
-.accordion[open] .accordion-icon {
-    transform: rotate(180deg);
-}
-.accordion-body {
-    padding: 0 20px 20px;
-}
-.accordion-body p {
-    color: #444;
+    text-decoration: none;
+    font-weight: 600;
     font-size: 14px;
-    line-height: 1.6;
-    margin: 0 0 12px;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+.detail-container {
+    max-width: 800px;
+    margin: 4vh auto 12vh;
+    padding: 0 20px;
+}
+.detail-container h1 {
+    color: #003D6A;
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+.detail-container .meta {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.detail-container h2 {
+    color: #003D6A;
+    font-size: 20px;
+    margin-top: 36px;
+    margin-bottom: 10px;
+}
+.detail-container p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
 }
 
 /* ---- Contact ---- */
@@ -393,7 +420,7 @@ button:focus {
     .project-card {
         width:90%;
     }
-    #experience .project-card {
+    .visual-card {
         width:90%;
     }
     #rightImage {
